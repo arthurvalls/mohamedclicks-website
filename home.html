@@ -388,16 +388,18 @@
                     <div class="div-contact2">
                         <h1>Entre em contato</h1>
                     </div>
-                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST" onsubmit="myFunction()">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="form-submit">
                             <div class="name-email">
                                 <input type="text" name="name" placeholder="Nome" required>
                                 <input type="hidden" name="_subject" value="Email do Site">
                                 <input type="email" name="email" placeholder="Email" required>
+
                             </div>
                             <div class="msg">
                                 <textarea type="text" name="message" placeholder="Mensagem" required></textarea>
+                                <input type="hidden" name="_next" value=msgSuccess()>
                             </div>
                             <div class="div-btn-contact">
                                 <button type="submit" class="btn-contact">Enviar Mensagem</button>
@@ -408,6 +410,7 @@
                                 <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                               </svg></a>
                             </div>
+                            <div class="result" id="result"> </div>
                     </form>
                     </div>
                 </div>

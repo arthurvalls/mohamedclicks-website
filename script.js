@@ -101,3 +101,8 @@ loadMoreBtn.onclick = () => {
         loadMoreBtn.style.display = 'none';
     }
 }
+
+
+function myFunction() {
+    document.getElementById('result').innerHTML = "A mensagem foi enviada com sucesso";
+}
