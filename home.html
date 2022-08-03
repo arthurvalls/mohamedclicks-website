@@ -13,12 +13,12 @@
 
 <body>
     <div class="header" id="header">
-        <button onclick="sidebar()" class="btn_nav">
+        <button onclick="sidebar()" class="btn-nav">
         <img src="./images/menu-2.svg" />
       </button>
         <div class="name">Yasmin Mohamed</div>
         <nav class="headernav" id="headernav">
-            <button onclick="sidebar()" class="btn_nav">
+            <button onclick="sidebar()" class="btn-nav">
           <img src="./images/x.svg" />
         </button>
             <a onclick="closeSidebar()" href="#header" class="">home</a>
@@ -103,11 +103,11 @@
                         </div>
                     </div>
                     <!-- The dots/circles -->
-                    <div class="div_description">
+                    <div class="div-description">
                         <h1>YASMIN</h1>
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu eros.
                             Ut auctor cursus elit, eget mattis nunc ornare quis. Mauris eu dui diam. </p>
-                        <div class="div_contact">
+                        <div class="div-contact">
                             <button onclick="window.location.href='#fourth-section'" class="btn-contact">Entrar em contato</button>
 
                         </div>
@@ -349,20 +349,20 @@
                 <div class="dividers" style="text-align: center">
                     <hr class="solid">
                 </div>
-                <div id="load-more" class="div_load">
+                <div id="load-more" class="div-load">
                     <button class="btn-load">Ver todas as fotos</button>
                 </div>
             </div>
         </div>
         <div class="third-section" id="third-section">
             <div class="third-container">
-                <div class="content_about">
-                    <div class="div_about">
+                <div class="content-about">
+                    <div class="div-about">
                         <h1>Yas Mohamed</h1>
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu eros.
                             Ut auctor cursus elit, eget mattis nunc ornare quis.
                         </p>
-                        <div class="div_contact">
+                        <div class="div-contact">
                             <button onclick="window.location.href='#fourth-section'" class="btn-contact2">Entrar em contato</button>
                             <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -372,7 +372,7 @@
                           </svg></a>
                         </div>
                     </div>
-                    <div class="div_img"><img class="img_about" src="./images/yas-test.jpeg" /></div>
+                    <div class="div-img"><img class="img-about" src="./images/yas-test.jpeg" /></div>
 
 
                 </div>
@@ -380,18 +380,39 @@
         </div>
         <div class="fourth-section" id="fourth-section">
             <div class="fourth-container">
-                <div class="fourth-content" style="padding-bottom: 128px; margin:auto; max-width:1392px;">
-                    <p style="background-color:#a480f228; color:#A480F2; font-weight:300; font-size: 56px; width: 400px; border-radius: 2px; padding: 24px; text-align: center; margin: auto;">se prepara :)</p>
-                    <div class="contact-form">
-                        <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
-                            <input type="hidden" name="_subject" value="novo email">
-                            <input type="email" name="email" placeholder="email" required>
-                            <input type="text" name="message" placeholder="escreva sua mensagem" required>
-                            <button type="submit">Send</button>
-                        </form>
+
+                <div class="div-img">
+                    <img class="img-about" src="./images/yas-bg.jpeg" />
+                </div>
+                <div class="contact-form">
+                    <div class="div-contact2">
+                        <h1>Entre em contato</h1>
+                    </div>
+                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
+                        <div class="form-submit">
+                            <div class="name-email">
+                                <input type="text" name="name" placeholder="Nome" required>
+                                <input type="hidden" name="-captcha" value="false">
+                                <input type="hidden" name="-subject" value="Email do Site">
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="msg">
+                                <textarea type="text" name="message" placeholder="Mensagem" required></textarea>
+                            </div>
+                            <div class="div-btn-contact">
+                                <button type="submit" class="btn-contact">Enviar Mensagem</button>
+                                <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <rect x="4" y="4" width="16" height="16" rx="4" />
+                                <circle cx="12" cy="12" r="3" />
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                              </svg></a>
+                            </div>
+                    </form>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     </div>
