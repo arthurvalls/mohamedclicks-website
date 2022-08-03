@@ -388,7 +388,7 @@
                     <div class="div-contact2">
                         <h1>Entre em contato</h1>
                     </div>
-                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST" onsubmit="myFunction()">
+                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="form-submit">
                             <div class="name-email">
@@ -399,10 +399,10 @@
                             </div>
                             <div class="msg">
                                 <textarea type="text" name="message" placeholder="Mensagem" required></textarea>
-                                <input type="hidden" name="_next" value=msgSuccess()>
+                                <input type="hidden" name="_next">
                             </div>
                             <div class="div-btn-contact">
-                                <button type="submit" class="btn-contact">Enviar Mensagem</button>
+                                <button type="submit" onsubmit="myFunction()" class="btn-contact">Enviar Mensagem</button>
                                 <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <rect x="4" y="4" width="16" height="16" rx="4" />
