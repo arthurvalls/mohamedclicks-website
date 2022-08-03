@@ -9,6 +9,8 @@
     --color-dark5: #5A189A;
     --color-pink: #7B2CBF;
     --font-main: 'Inter', sans-serif;
+    --color-purple: #A480F2;
+    --color-lightpink: hsla(344, 100%, 73%, 1);
 }
 
 
@@ -30,7 +32,7 @@
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
-    background: hsla(344, 100%, 73%);
+    background: #ff759a;
     border-radius: 10px;
 }
 
@@ -39,6 +41,8 @@
     padding: 0;
     font-family: var(--font-main);
     scroll-behavior: smooth;
+    scrollbar-color: #ff759a var(--color-bg);
+    scrollbar-width: 15px;
 }
 
 body {
@@ -53,7 +57,7 @@ body {
     font-size: 40px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: hsla(344, 100%, 73%, 1);
+    background-color: var(--color-lightpink);
     background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
 }
 
@@ -62,21 +66,27 @@ h1 {
 }
 
 .div_about {
-    width: 45%;
-    padding-right: 6rem;
+    margin-right: 6rem;
+    width: 50%;
     color: var(--color-bg);
 }
 
+.div_about p {
+    color: #EAE1FC;
+}
+
+.div_about>*,
+.div_description>* {
+    padding-bottom: 0.5rem;
+}
+
 .first-container {
-    max-width: 1600px;
-    margin: 0;
+    max-width: 1392px;
+    margin: auto;
     height: 100%;
 }
 
-.first_section {
-    width: 100%;
-    height: 100%;
-    padding: 0 0 5rem 0;
+.first-section {
     margin-bottom: 8rem;
 }
 
@@ -100,36 +110,45 @@ h1 {
 }
 
 .second-section {
+    padding: 2rem 0;
+    /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
     width: 100%;
-    padding: 5rem 0 5rem 0;
-    margin-bottom: 8rem;
+    margin: 6rem 0;
+}
+
+.second-container {
+    max-width: 1392px;
+    margin: auto;
 }
 
 .third-section {
-    margin: 0;
-    width: 100%;
     height: 100%;
-    background-color: #A480F2;
-    padding: 128px;
+    background-color: var(--color-purple);
+    margin: 8rem 0;
+}
+
+.third-container {
+    max-width: 1392px;
+    margin: auto;
 }
 
 .content_about {
+    padding: 128px 0;
     display: flex;
     justify-content: center;
     vertical-align: middle;
     align-items: center;
-    padding: 2rem;
-    height: 100%;
 }
 
 .second-section .pictures:nth-child(1),
 .second-section .pictures:nth-child(2),
 .second-section .pictures:nth-child(3) {
-    display: inline-block;
+    display: flex;
 }
 
 .pictures {
     display: none;
+    justify-content: center;
     width: 100%;
     height: 15rem;
 }
@@ -142,10 +161,9 @@ h1 {
 }
 
 .pictures div {
-    display: inline-block;
     width: 15rem;
     height: 15rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .pictures button {
@@ -165,11 +183,11 @@ h1 {
 }
 
 .div_img {
-    height: 100%;
+    height: 50%;
+    width: 50%;
 }
 
 .img_about {
-    margin-right: 15px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -201,7 +219,7 @@ section {
 .div_description {
     width: 50%;
     align-items: left;
-    padding: 80px;
+    margin-left: 6rem;
     font-size: 18px;
 }
 
@@ -232,20 +250,16 @@ a {
 .headernav>a {
     text-decoration: none;
     color: var(--color-text);
-    transition: 1s;
+    transition: 0.6s ease;
     font-weight: bold;
 }
 
 .header a:hover {
-    color: hsla(344, 100%, 73%, 1)
+    color: var(--color-lightpink)
 }
 
 .content {
     padding-top: 5em;
-    height: 100vh;
-    transition: 1s;
-    padding-left: 128px;
-    padding-right: 128px;
 }
 
 .btn_nav {
@@ -270,9 +284,6 @@ a {
     }
     .btn_nav {
         display: block;
-    }
-    .div_about {
-        width: 100%;
     }
     h1 {
         padding-left: 1em;
@@ -310,7 +321,7 @@ a {
 
 .mySlides {
     display: none;
-    width: 45rem;
+    width: 100%;
     height: 40rem;
 }
 
@@ -321,11 +332,6 @@ a {
     object-fit: cover;
 }
 
-.slideshow-container {
-    width: 45rem;
-    height: 40rem;
-}
-
 
 /* Next & previous buttons */
 
@@ -334,7 +340,7 @@ a {
     cursor: pointer;
     width: auto;
     padding: 0.5rem;
-    color: #A480F2;
+    color: var(--color-purple);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -400,7 +406,7 @@ a {
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .6
     }
     to {
         opacity: 1
@@ -415,9 +421,9 @@ a {
     justify-content: center;
     align-items: center;
     padding: 24px;
-    border: 2px solid #A480F2;
+    border: 2px solid var(--color-purple);
     border-radius: 2px;
-    color: #A480F2;
+    color: var(--color-purple);
     font-family: var(--font-main);
     font-weight: 600;
     font-size: 18px;
@@ -425,7 +431,7 @@ a {
 
 .btn-pics:hover {
     border: 2px solid transparent;
-    background-color: hsla(344, 100%, 73%, 1);
+    background-color: var(--color-lightpink);
     background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: var(--color-bg);
@@ -437,7 +443,7 @@ a {
     font-size: 24px;
     border-radius: 2px;
     font-weight: 600;
-    background-color: hsla(344, 100%, 73%, 1);
+    background-color: var(--color-lightpink);
     background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: #FBF9FF;
@@ -459,10 +465,11 @@ a {
 .btn-contact {
     padding: 1.5rem;
     font-size: 24px;
+    line-height: 36px;
     border-radius: 2px;
     font-weight: 600;
-    background-color: hsla(344, 100%, 73%, 1);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-color: var(--color-lightpink);
+    background-image: radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: #FBF9FF;
     border: 0;
@@ -476,16 +483,16 @@ a {
     padding: 1.5rem;
     border-radius: 2px;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 24px;
+    line-height: 36px;
     border: 0;
     cursor: pointer;
-    color: #A480F2;
+    color: var(--color-purple);
     box-shadow: 0px 14px 94px rgba(133, 94, 217, 0.25), 0px 5.11023px 34.3115px rgba(133, 94, 217, 0.15), 0px 2.48092px 16.6576px rgba(133, 94, 217, 0.14), 0px 1.21619px 8.16588px rgba(133, 94, 217, 0.1), 0px 0.480885px 3.2288px rgba(133, 94, 217, 0.08);
 }
 
 .btn-contact2:hover {
-    background-color: hsla(344, 100%, 73%, 1);
+    background-color: var(--color-lightpink);
     background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: var(--color-bg);
@@ -502,7 +509,7 @@ a {
 }
 
 hr.solid {
-    border-top: 2px solid #A480F2;
+    border-top: 2px solid var(--color-purple);
     margin: 3rem 12rem 3rem 12rem;
     opacity: 25%;
 }

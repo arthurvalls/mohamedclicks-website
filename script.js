@@ -92,7 +92,7 @@ loadMoreBtn.onclick = () => {
     var pics = [...document.querySelectorAll('.pictures')];
     var divs = [...document.querySelectorAll('.dividers')];
     for (var i = currentItem; i < currentItem + 6; i++) {
-        pics[i].style.display = 'inline-block';
+        pics[i].style.display = 'flex';
         divs[i].style.display = 'block';
 
     }
