@@ -1,0 +1,519 @@
+@import url('https://rsms.me/inter/inter.css');
+:root {
+    --color-bg: #FBF9FF;
+    --color-text: #645673;
+    --color-header: #F8EAFF;
+    --color-title: #3C3344;
+    --color-dark3: #E0AAFF;
+    --color-dark4: #20122c;
+    --color-dark5: #5A189A;
+    --color-pink: #7B2CBF;
+    --font-main: 'Inter', sans-serif;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    background: var(--color-bg);
+    width: 15px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: hsla(344, 100%, 73%);
+    border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.name {
+    font-family: var(--font-main);
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: hsla(344, 100%, 73%, 1);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+}
+
+h1 {
+    text-align: left;
+}
+
+.div_about {
+    width: 45%;
+    padding-right: 6rem;
+    color: var(--color-bg);
+}
+
+.first-container {
+    max-width: 1600px;
+    margin: 0;
+    height: 100%;
+}
+
+.first_section {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 5rem 0;
+    margin-bottom: 8rem;
+}
+
+.first-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-flexbox h1 {
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 73px;
+    color: var(--color-title)
+}
+
+.first-flexbox p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.second-section {
+    width: 100%;
+    padding: 5rem 0 5rem 0;
+    margin-bottom: 8rem;
+}
+
+.third-section {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A480F2;
+    padding: 128px;
+}
+
+.content_about {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    padding: 2rem;
+    height: 100%;
+}
+
+.second-section .pictures:nth-child(1),
+.second-section .pictures:nth-child(2),
+.second-section .pictures:nth-child(3) {
+    display: inline-block;
+}
+
+.pictures {
+    display: none;
+    width: 100%;
+    height: 15rem;
+}
+
+.pictures img {
+    border-radius: 2px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.pictures div {
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
+    margin-right: 0.5rem;
+}
+
+.pictures button {
+    width: 100%;
+    height: 100%;
+}
+
+.div_contact {
+    line-height: 20px;
+    text-align: left;
+    padding-top: 2em;
+}
+
+.div_contact svg {
+    vertical-align: middle;
+    color: #9B287B;
+}
+
+.div_img {
+    height: 100%;
+}
+
+.img_about {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.p {
+    padding-top: 1em;
+    text-align: justify;
+}
+
+.third-section p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.third-section h1 {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 73px;
+}
+
+.div_description {
+    width: 50%;
+    align-items: left;
+    padding: 80px;
+    font-size: 18px;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.header,
+.headernav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background: var(--color-bg);
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 4rem 128px;
+}
+
+.headernav {
+    gap: 3em;
+    z-index: 2;
+}
+
+.headernav>a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: 1s;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: hsla(344, 100%, 73%, 1)
+}
+
+.content {
+    padding-top: 5em;
+    height: 100vh;
+    transition: 1s;
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+.btn_nav {
+    display: none;
+    background-color: transparent;
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .headernav {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vh;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .btn_nav {
+        display: block;
+    }
+    .div_about {
+        width: 100%;
+    }
+    h1 {
+        padding-left: 1em;
+    }
+    .p {
+        padding: 1em;
+        text-align: left;
+    }
+}
+
+@keyframes showSidebar {
+    from {
+        margin-left: -100vw;
+    }
+    to {
+        margin-left: -10vw;
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+    width: 45rem;
+    height: 40rem;
+}
+
+.mySlides img {
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow-container {
+    width: 45rem;
+    height: 40rem;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    padding: 0.5rem;
+    color: #A480F2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: #a480f228;
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    border-radius: 2px;
+    cursor: pointer;
+    height: 15px;
+    width: 6rem;
+    margin: 0 2px;
+    background-color: #a480f228;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #a480f2;
+}
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.btn-pics {
+    background-color: var(--color-bg);
+    transition: 0.6s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    border: 2px solid #A480F2;
+    border-radius: 2px;
+    color: #A480F2;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn-pics:hover {
+    border: 2px solid transparent;
+    background-color: hsla(344, 100%, 73%, 1);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+    color: var(--color-bg);
+    cursor: pointer;
+}
+
+.btn-load {
+    padding: 1.5rem;
+    font-size: 24px;
+    border-radius: 2px;
+    font-weight: 600;
+    background-color: hsla(344, 100%, 73%, 1);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+    color: #FBF9FF;
+    border: 0;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.btn-load:hover,
+.btn-contact:hover {
+    background-color: hsla(344, 100%, 73%, 0.3);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+}
+
+.div_load {
+    text-align: center;
+}
+
+.btn-contact {
+    padding: 1.5rem;
+    font-size: 24px;
+    border-radius: 2px;
+    font-weight: 600;
+    background-color: hsla(344, 100%, 73%, 1);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+    color: #FBF9FF;
+    border: 0;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.btn-contact2 {
+    transition: 0.6s ease;
+    margin-right: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    border: 0;
+    cursor: pointer;
+    color: #A480F2;
+    box-shadow: 0px 14px 94px rgba(133, 94, 217, 0.25), 0px 5.11023px 34.3115px rgba(133, 94, 217, 0.15), 0px 2.48092px 16.6576px rgba(133, 94, 217, 0.14), 0px 1.21619px 8.16588px rgba(133, 94, 217, 0.1), 0px 0.480885px 3.2288px rgba(133, 94, 217, 0.08);
+}
+
+.btn-contact2:hover {
+    background-color: hsla(344, 100%, 73%, 1);
+    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+    color: var(--color-bg);
+}
+
+.div_contact a svg {
+    color: var(--color-bg);
+}
+
+.div_contact a svg:hover {
+    transition: 0.6s ease;
+    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+    color: rgb(253, 156, 182);
+}
+
+hr.solid {
+    border-top: 2px solid #A480F2;
+    margin: 3rem 12rem 3rem 12rem;
+    opacity: 25%;
+}
+
+.second-section .dividers:nth-child(1),
+.second-section .dividers:nth-child(2),
+.second-section .dividers:nth-child(3),
+.second-section .dividers:nth-child(4) {
+    display: block;
+}
+
+.second-section .dividers {
+    display: none;
+}

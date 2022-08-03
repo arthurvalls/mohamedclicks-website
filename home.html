@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./home.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <button onclick="sidebar()" class="btn_nav">
+        <img src="./images/menu-2.svg" />
+      </button>
+        <div class="name">Yasmin Mohamed</div>
+        <nav class="headernav" id="headernav">
+            <button onclick="sidebar()" class="btn_nav">
+          <img src="./images/x.svg" />
+        </button>
+            <a href="#first-section" class="">home</a>
+            <a href="#second-section" class="">fotos</a>
+            <a href="#third-section" class="">sobre</a>
+            <a href="#fourth-section" class="">contato</a>
+        </nav>
+    </div>
+    <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
+
+        <div class="first_section" id="first-section">
+
+            <div class="first-container">
+
+                <div class="first-flexbox">
+
+
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+
+                            <img src="./images/pink-cover.JPG">
+
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/civil-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/dce-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/bloco-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/carna-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/ibmec-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/clara-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/ibmec-cover2.JPG">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <br>
+                        <div style="padding-top: 0.5rem; width: 100%;display: flex; justify-content: center; height:40px; align-items: center; gap: 1rem;">
+                            <span class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <line x1="5" y1="12" x2="11" y2="18" />
+                            <line x1="5" y1="12" x2="11" y2="6" />
+                          </svg></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <line x1="13" y1="18" x2="19" y2="12" />
+                            <line x1="13" y1="6" x2="19" y2="12" />
+                          </svg></span>
+                        </div>
+                    </div>
+
+                    <!-- The dots/circles -->
+
+                    <div class="div_description">
+                        <h1>Sobre </h1>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu eros.
+                            Ut auctor cursus elit, eget mattis nunc ornare quis. Mauris eu dui diam. </p>
+                        <div class="div_contact">
+                            <button class="btn-contact">Entrar em contato</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="second-section" id="second-section">
+
+
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/ufrj01.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj02.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj03.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj04.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS UFRJ CIVIL MENTIU 8.0 🚀🔥<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span></button>
+                </div>
+            </div>
+
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/pink01.JPG">
+                </div>
+                <div>
+                    <img src="./images/pink02.JPG">
+                </div>
+                <div>
+                    <img src="./images/pink03.JPG">
+                </div>
+                <div>
+                    <img src="./images/pink04.JPG">
+                </div>
+                <div>
+                    <img src="./images/pink05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics"> VER TODAS AS FOTOS ALL PINK DA YAS 💖<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/ibmec01.JPG">
+                </div>
+                <div>
+                    <img src="./images/ibmec02.JPG">
+                </div>
+                <div>
+                    <img src="./images/ibmec03.JPG">
+                </div>
+                <div>
+                    <img src="./images/ibmec04.JPG">
+                </div>
+                <div>
+                    <img src="./images/ibmec05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS ATLÉTICA DIREITO IBMEC RIO🟢⚫️<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+
+
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/dce01.JPG">
+                </div>
+                <div>
+                    <img src="./images/dce02.JPG">
+                </div>
+                <div>
+                    <img src="./images/dce03.JPG">
+                </div>
+                <div>
+                    <img src="./images/dce04.JPG">
+                </div>
+                <div>
+                    <img src="./images/dce05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS BLOCO DO DCE UERJ🎉<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/carna01.JPG">
+                </div>
+                <div>
+                    <img src="./images/carna02.JPG">
+                </div>
+                <div>
+                    <img src="./images/carna03.JPG">
+                </div>
+                <div>
+                    <img src="./images/carna04.JPG">
+                </div>
+                <div>
+                    <img src="./images/carna05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS CARNAGILDY 💋<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/clara01.JPG">
+                </div>
+                <div>
+                    <img src="./images/clara02.JPG">
+                </div>
+                <div>
+                    <img src="./images/clara03.JPG">
+                </div>
+                <div>
+                    <img src="./images/clara04.JPG">
+                </div>
+                <div>
+                    <img src="./images/clara05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS FESTA DA CLARA👻<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/ufrj01.JPG">
+                </div>
+                <div>
+                    <img src="./images/christmas-tree.svg">
+                </div>
+                <div>
+                    <img src="./images/ufrj03.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj04.JPG">
+                </div>
+                <div>
+                    <img src="./images/ufrj05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS CHURRAS 3002✖️<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span> </button>
+                </div>
+            </div>
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+            <div class="pictures">
+
+                <div>
+                    <img src="./images/natal01.JPG">
+                </div>
+                <div>
+                    <img src="./images/natal02.JPG">
+                </div>
+                <div>
+                    <img src="./images/natal03.JPG">
+                </div>
+                <div>
+                    <img src="./images/natal04.JPG">
+                </div>
+                <div>
+                    <img src="./images/natal05.JPG">
+                </div>
+                <div style="position:absolute; margin: 0;">
+                    <button class="btn-pics">VER TODAS AS FOTOS NATALINDOS🎄<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="13" y1="18" x2="19" y2="12" />
+                        <line x1="13" y1="6" x2="19" y2="12" />
+                      </svg></span></button>
+                </div>
+            </div>
+            <div class="dividers" style="text-align: center">
+                <hr class="solid">
+            </div>
+
+            <div id="load-more" class="div_load">
+                <button class="btn-load">Ver todas as fotos</button></div>
+        </div>
+        <div class="third-section" id="third-section">
+            <div class="content_about">
+                <div class="div_about">
+                    <h1>Sobre </h1>
+                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu eros. Ut
+                        auctor cursus elit, eget mattis nunc ornare quis.
+                    </p>
+                    <div class="div_contact">
+                        <button class="btn-contact2">Entrar em contato</button>
+                        <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                          </svg></a>
+                    </div>
+                </div>
+                <div class="div_img"><img class="img_about" src="./images/yas-test.jpeg" /></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+
+
+</html>
