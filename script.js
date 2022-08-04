@@ -14,6 +14,7 @@ function sidebar() {
         content.style.filter = 'blur(2px)';
         nome.style.filter = 'blur(2px)';
         body.style.overflowY = 'hidden';
+        body.style.position = 'relative';
 
     } else {
 
@@ -22,7 +23,7 @@ function sidebar() {
         content.style.filter = '';
         nome.style.filter = '';
         body.style.overflowY = 'scroll';
-
+        body.style.position = '';
 
     }
 }
