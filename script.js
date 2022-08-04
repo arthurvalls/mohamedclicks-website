@@ -21,7 +21,8 @@ function sidebar() {
         headernav.style.animationName = '';
         content.style.filter = '';
         nome.style.filter = '';
-        body.style.overflowY = 'scroll';
+        body.style.overflowY = '';
+
 
     }
 }
