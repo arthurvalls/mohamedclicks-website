@@ -4,7 +4,6 @@ var content = document.getElementById('content');
 var nome = document.getElementById('nome');
 var showSidebar = false;
 var body = document.getElementById('body');
-var html = document.getElementById('html');
 
 function sidebar() {
     showSidebar = !showSidebar;
@@ -15,8 +14,6 @@ function sidebar() {
         content.style.filter = 'blur(2px)';
         nome.style.filter = 'blur(2px)';
         body.style.overflowY = 'hidden';
-        html.style.overflowY = 'hidden';
-        body.style.position = 'relative';
 
     } else {
 
@@ -25,7 +22,6 @@ function sidebar() {
         content.style.filter = '';
         nome.style.filter = '';
         body.style.overflowY = 'scroll';
-        html.style.overflowY = 'scroll';
 
 
     }
