@@ -45,7 +45,6 @@
     scrollbar-width: 15px;
 }
 
-html,
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg);
