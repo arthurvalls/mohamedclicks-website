@@ -1,166 +1,206 @@
-@media screen and (max-width: 768px) {
-    .headernav {
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        background-color: var(--color-lightpink);
-        background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-        object-fit: cover;
-        height: 100%;
-        width: 20vh;
-        padding: 1em;
-        animation-duration: 1s;
-        margin-left: -110vw;
-        color: var(--color-bg);
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sidebar .headernav {
+    position: absolute;
+    flex-direction: column;
+    left: -50%;
+    animation: slide 0.5s forwards;
+    top: 0;
+    background-color: var(--color-lightpink);
+    object-fit: cover;
+    height: 100%;
+    width: 50%;
+    padding: 1em;
+    animation-duration: 1s;
+    color: var(--color-bg);
+  }
+
+  .sidebar {
+    /* it's a mobile sidebar, blocker and content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* to cover the whole screen */
+    height: 100vh;
+    padding: 0; /* to override the default padding */
+    display: none;
+    z-index: 99999; /* to be on top of any other elements */
+  }
+
+  .sidebar .blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar.visible {
+    display: block;
+  }
+
+  @keyframes slide {
+    100% {
+      left: 0;
     }
-    .btn-nav {
-        display: block;
-    }
-    .header {
-        padding: 2rem;
-    }
-    .nome {
-        font-size: 2rem;
-    }
-    .headernav>a {
-        color: var(--color-bg);
-        font-size: 1.2rem;
-    }
-    .header a:hover {
-        color: var(--color-bg);
-    }
-    .content {
-        padding-top: 2.5rem;
-    }
-    .first-container,
-    .second-container,
-    .third-container,
-    .fourth-container {
-        max-width: 350px;
-    }
-    .first-flexbox {
-        flex-direction: column;
-    }
-    .slideshow-container {
-        max-width: 100%;
-    }
-    .mySlides {
-        height: 25rem;
-    }
-    .slideshow-indicator {
-        gap: 0.2rem;
-    }
-    .first-flexbox h1,
-    .div-contact2 h1 {
-        font-weight: 900;
-        font-size: 2.5rem;
-        line-height: 3.25rem;
-    }
-    .div-description {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 1em;
-    }
-    .btn-contact {
-        width: 100%;
-    }
-    hr.solid {
-        border-top: 2px solid var(--color-purple);
-        margin: 2rem;
-        opacity: 25%;
-    }
-    .pictures {
-        width: 100%;
-        height: 100%;
-    }
-    .pictures div {
-        width: 100%;
-        height: 11rem;
-        margin-right: 1rem;
-    }
-    .pictures div button svg {
-        height: 2rem;
-    }
-    .pictures img {
-        border-radius: 2px;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-    .pictures button {
-        width: 100%;
-        height: 100%;
-    }
-    .btn-pics {
-        gap: 0.5em;
-        flex-direction: column;
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
-    .pictures div:nth-child(2),
-    .pictures div:nth-child(3),
-    .pictures div:nth-child(4),
-    .pictures div:nth-child(5) {
-        display: none;
-    }
-    .div-about {
-        margin: 0;
-        width: 100%;
-    }
-    .content-about {
-        flex-direction: column;
-    }
-    .div-about .div-contact {
-        display: none;
-    }
-    .div-img {
-        width: 100%;
-        height: 100%;
-    }
-    .fourth-container .div-img {
-        display: none;
-    }
-    .contact-form {
-        width: 100%;
-        margin: 0;
-    }
-    .div-btn-contact .btn-contact {
-        width: 75%;
-        margin-right: 1rem;
-    }
-    .first-section {
-        margin-bottom: 4rem;
-    }
-    .second-section {
-        padding: 2rem 0;
-        /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
-        width: 100%;
-        margin: 2rem 0;
-    }
-    .fourth-section,
-    .third-section {
-        height: 100%;
-        margin: 4rem 0;
-    }
-    .div-about>*,
-    .div-description>*,
-    .contact-form>* {
-        padding-bottom: 1rem;
-    }
-    .content-about {
-        padding: 4rem 0;
-    }
+  }
+
+  .btn-nav {
+    display: block;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .nome {
+    font-size: 1.5rem;
+  }
+  .headernav > a {
+    color: var(--color-bg);
+    font-size: 4.3vw;
+  }
+  .header a:hover {
+    color: var(--color-bg);
+  }
+  .content {
+    padding-top: 2.5rem;
+  }
+  .first-container,
+  .second-container,
+  .third-container,
+  .fourth-container {
+    max-width: 80%;
+  }
+  .first-flexbox {
+    flex-direction: column;
+  }
+  .slideshow-container {
+    max-width: 100%;
+  }
+  .mySlides {
+    height: 25rem;
+  }
+  .slideshow-indicator {
+    gap: 0.2rem;
+  }
+  .first-flexbox h1,
+  .div-contact2 h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+  .div-description {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1em;
+  }
+  .btn-contact {
+    width: 100%;
+  }
+  hr.solid {
+    border-top: 2px solid var(--color-purple);
+    margin: 2rem;
+    opacity: 25%;
+  }
+  .pictures {
+    width: 100%;
+    height: 100%;
+  }
+  .pictures div {
+    width: 100%;
+    height: 11rem;
+    margin-right: 1rem;
+  }
+  .pictures div button svg {
+    height: 2rem;
+  }
+  .pictures img {
+    border-radius: 2px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .pictures button {
+    width: 100%;
+    height: 100%;
+  }
+  .btn-pics {
+    gap: 0.5em;
+    flex-direction: column;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  .pictures div:nth-child(2),
+  .pictures div:nth-child(3),
+  .pictures div:nth-child(4),
+  .pictures div:nth-child(5) {
+    display: none;
+  }
+  .div-about {
+    margin: 0;
+    width: 100%;
+  }
+  .content-about {
+    flex-direction: column;
+  }
+  .div-about .div-contact {
+    display: none;
+  }
+  .div-img {
+    width: 100%;
+    height: 100%;
+  }
+  .fourth-container .div-img {
+    display: none;
+  }
+  .contact-form {
+    width: 100%;
+    margin: 0;
+  }
+  .div-btn-contact .btn-contact {
+    width: 75%;
+    margin-right: 1rem;
+  }
+  .first-section {
+    margin-bottom: 4rem;
+  }
+  .second-section {
+    padding: 2rem 0;
+    /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .fourth-section,
+  .third-section {
+    height: 100%;
+    margin: 4rem 0;
+  }
+  .div-about > *,
+  .div-description > *,
+  .contact-form > * {
+    padding-bottom: 1rem;
+  }
+  .content-about {
+    padding: 4rem 0;
+  }
 }
 
-@keyframes showSidebar {
-    from {
-        margin-left: -110vw;
-    }
-    to {
-        margin-left: -8vw;
-    }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
 }
 
-* {
-    box-sizing: border-box
+ {
+  ...;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
 }

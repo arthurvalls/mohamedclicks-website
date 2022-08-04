@@ -13,425 +13,497 @@
 </head>
 
 <body id="body">
-    <div class="wrapper">
-        <div class="header" id="header">
-            <button onclick="sidebar()" class="btn-nav">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <div class="header" id="header">
+        <button onclick="toggle()" class="btn-nav">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <line x1="4" y1="6" x2="20" y2="6"></line>
                 <line x1="4" y1="12" x2="20" y2="12"></line>
                 <line x1="4" y1="18" x2="20" y2="18"></line>
-             </svg>
-      </button>
-            <div class="nome" id="nome">Yasmin Mohamed</div>
-            <nav class="headernav" id="headernav">
-                <button onclick="sidebar()" class="btn-nav">
-                <svg style="margin-top: 1em" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--color-bg)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                 </svg>
+            </svg>
         </button>
+        <div class="nome" id="nome">Yasmin Mohamed</div>
+        <div class="sidebar">
+            <div class="blocker"></div>
+            <nav class="headernav" id="headernav">
+                <button onclick="toggle()" class="btn-nav">
+                    <svg style="margin-top: 1em" xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2.5" stroke="var(--color-bg)" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
                 <a onclick="closeSidebar()" href="#header" class="">home</a>
                 <a onclick="closeSidebar()" href="#second-section" class="">fotos</a>
                 <a onclick="closeSidebar()" href="#third-section" class="">sobre</a>
                 <a onclick="closeSidebar()" href="#fourth-section" class="">contato</a>
+                <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                    </svg></a>
             </nav>
         </div>
-        <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
+    </div>
+    <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
 
-            <div class="first-section" id="first-section">
-                <div class="first-container">
-                    <div class="first-flexbox">
-                        <!-- Slideshow container -->
-                        <div class="slideshow-container">
+        <div class="first-section" id="first-section">
+            <div class="first-container">
+                <div class="first-flexbox">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
 
-                            <!-- Full-width images with number and caption text -->
-                            <div class="mySlides fade">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
 
-                                <img src="./images/pink-cover.JPG">
+                            <img src="./images/pink-cover.JPG">
 
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/civil-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/dce-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/bloco-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/carna-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/ibmec-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/clara-cover.JPG">
-                            </div>
-
-                            <div class="mySlides fade">
-
-                                <img src="./images/ibmec-cover2.JPG">
-                            </div>
-
-                            <!-- Next and previous buttons -->
-                            <br>
-                            <div class="slideshow-indicator">
-                                <span class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="5" y1="12" x2="11" y2="18" />
-                            <line x1="5" y1="12" x2="11" y2="6" />
-                          </svg></span>
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                                <span class="dot" onclick="currentSlide(4)"></span>
-                                <span class="dot" onclick="currentSlide(5)"></span>
-                                <span class="dot" onclick="currentSlide(6)"></span>
-                                <span class="dot" onclick="currentSlide(7)"></span>
-                                <span class="dot" onclick="currentSlide(8)"></span>
-                                <span class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                          </svg></span>
-                            </div>
                         </div>
-                        <!-- The dots/circles -->
-                        <div class="div-description">
-                            <h1>YASMIN</h1>
-                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu
-                                eros. Ut auctor cursus elit, eget mattis nunc ornare quis. Mauris eu dui diam. </p>
-                            <div class="div-contact">
-                                <button onclick="window.location.href='#fourth-section'" class="btn-contact">Entrar em contato</button>
 
-                            </div>
+                        <div class="mySlides fade">
+
+                            <img src="./images/civil-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/dce-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/bloco-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/carna-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/ibmec-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/clara-cover.JPG">
+                        </div>
+
+                        <div class="mySlides fade">
+
+                            <img src="./images/ibmec-cover2.JPG">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <br>
+                        <div class="slideshow-indicator">
+                            <span class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-left" width="40" height="40"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="5" y1="12" x2="11" y2="18" />
+                                    <line x1="5" y1="12" x2="11" y2="6" />
+                                </svg></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="40" height="40"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <!-- The dots/circles -->
+                    <div class="div-description">
+                        <h1>YASMIN</h1>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui
+                            id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed
+                            elit lacus, aliquet ac vehicula eget, commodo eu eros.
+                            Ut auctor cursus elit, eget mattis nunc ornare quis. Mauris eu dui diam. </p>
+                        <div class="div-contact">
+                            <button onclick="window.location.href='#fourth-section'" class="btn-contact">Entrar em
+                                contato</button>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="second-section" id="second-section">
-                <div class="second-container">
-                    <div class="pictures">
+        </div>
+        <div class="second-section" id="second-section">
+            <div class="second-container">
+                <div class="pictures">
 
-                        <div>
-                            <img src="./images/ufrj04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ufrj02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ufrj03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ufrj01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ufrj05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button onclick="window.location.href='https://drive.google.com/drive/folders/1-ULkKENk7PcbtfKaFjnyaAaJizusC73F'" class="btn-pics">VER TODAS AS FOTOS UFRJ CIVIL MENTIU 8.0 🚀🔥<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span></button>
-                        </div>
+                    <div>
+                        <img src="./images/ufrj04.JPG">
                     </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
+                    <div>
+                        <img src="./images/ufrj02.JPG">
                     </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/pink02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/pink01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/pink03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/pink04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/pink05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/1-eWcJ59OSYBjKu5nOe5k7xzNUJiMybil'"> VER TODAS AS FOTOS ALL PINK DA YAS 💖<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
+                    <div>
+                        <img src="./images/ufrj03.JPG">
                     </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
+                    <div>
+                        <img src="./images/ufrj01.JPG">
                     </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/ibmec01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ibmec02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ibmec03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ibmec04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/ibmec05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/1-IOatI7wWyC2k_dTWj6Vdwdejm6nr4sf'">VER TODAS AS FOTOS ATLÉTICA DIREITO IBMEC RIO🟢⚫️<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
+                    <div>
+                        <img src="./images/ufrj05.JPG">
                     </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
-                    </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/dce04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/dce02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/dce03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/dce01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/dce05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/1-EJIOSlLg8RO9DdpMAK2nuI0IgOHfbUt'">VER TODAS AS FOTOS BLOCO DO DCE UERJ🎉<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
-                    </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
-                    </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/carna02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/carna01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/carna03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/carna04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/carna05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/1-DjIc3NQI5G6mt2Zlcnk5osjtFIjKVS1'">VER TODAS AS FOTOS CARNAGILDY 💋<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
-                    </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
-                    </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/clara04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/clara02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/clara03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/clara01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/clara05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/1heF1rX-JHkCeUFkYXjVFnTYbDolFCdqW'">VER TODAS AS FOTOS FESTA DA CLARA👻<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
-                    </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
-                    </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/cade.jpg">
-                        </div>
-                        <div>
-                            <img src="./images/cade.jpg">
-                        </div>
-                        <div>
-                            <img src="./images/cade.jpg">
-                        </div>
-                        <div>
-                            <img src="./images/cade.jpg">
-                        </div>
-                        <div>
-                            <img src="./images/cade.jpg">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/18lD3X0AYPrI1dPSs5rHE0ezndhJeRuC6'">VER TODAS AS FOTOS CHURRAS 3002✖️<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span> </button>
-                        </div>
-                    </div>
-                    <div class="dividers" style="text-align: center">
-                        <hr class="solid">
-                    </div>
-                    <div class="pictures">
-
-                        <div>
-                            <img src="./images/natal04.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/natal02.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/natal03.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/natal01.JPG">
-                        </div>
-                        <div>
-                            <img src="./images/natal05.JPG">
-                        </div>
-                        <div style="margin: 0;">
-                            <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/16PledFYHuCx6QS8mJegexhqoj4s4NcDB'">VER TODAS AS FOTOS NATALINDOS🎄<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <line x1="13" y1="18" x2="19" y2="12" />
-                            <line x1="13" y1="6" x2="19" y2="12" />
-                        </svg></span></button>
-                        </div>
-                    </div>
-                    <div class="dividers" style="text-align: center">
-                    </div>
-                    <div id="load-more" class="div-load">
-                        <button class="btn-load">Ver todas as fotos</button>
+                    <div style="margin: 0;">
+                        <button
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1-ULkKENk7PcbtfKaFjnyaAaJizusC73F'"
+                            class="btn-pics">VER TODAS AS FOTOS UFRJ CIVIL MENTIU 8.0 🚀🔥<span><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right"
+                                    width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span></button>
                     </div>
                 </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/pink02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/pink01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/pink03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/pink04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/pink05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1-eWcJ59OSYBjKu5nOe5k7xzNUJiMybil'">
+                            VER TODAS AS FOTOS ALL PINK DA YAS 💖<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/ibmec01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/ibmec02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/ibmec03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/ibmec04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/ibmec05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1-IOatI7wWyC2k_dTWj6Vdwdejm6nr4sf'">VER
+                            TODAS AS FOTOS ATLÉTICA DIREITO IBMEC RIO🟢⚫️<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/dce04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/dce02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/dce03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/dce01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/dce05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1-EJIOSlLg8RO9DdpMAK2nuI0IgOHfbUt'">VER
+                            TODAS AS FOTOS BLOCO DO DCE UERJ🎉<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/carna02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/carna01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/carna03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/carna04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/carna05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1-DjIc3NQI5G6mt2Zlcnk5osjtFIjKVS1'">VER
+                            TODAS AS FOTOS CARNAGILDY 💋<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/clara04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/clara02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/clara03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/clara01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/clara05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/1heF1rX-JHkCeUFkYXjVFnTYbDolFCdqW'">VER
+                            TODAS AS FOTOS FESTA DA CLARA👻<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/cade.jpg">
+                    </div>
+                    <div>
+                        <img src="./images/cade.jpg">
+                    </div>
+                    <div>
+                        <img src="./images/cade.jpg">
+                    </div>
+                    <div>
+                        <img src="./images/cade.jpg">
+                    </div>
+                    <div>
+                        <img src="./images/cade.jpg">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/18lD3X0AYPrI1dPSs5rHE0ezndhJeRuC6'">VER
+                            TODAS AS FOTOS CHURRAS 3002✖️<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span> </button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                    <hr class="solid">
+                </div>
+                <div class="pictures">
+
+                    <div>
+                        <img src="./images/natal04.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/natal02.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/natal03.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/natal01.JPG">
+                    </div>
+                    <div>
+                        <img src="./images/natal05.JPG">
+                    </div>
+                    <div style="margin: 0;">
+                        <button class="btn-pics"
+                            onclick="window.location.href='https://drive.google.com/drive/folders/16PledFYHuCx6QS8mJegexhqoj4s4NcDB'">VER
+                            TODAS AS FOTOS NATALINDOS🎄<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <line x1="13" y1="18" x2="19" y2="12" />
+                                    <line x1="13" y1="6" x2="19" y2="12" />
+                                </svg></span></button>
+                    </div>
+                </div>
+                <div class="dividers" style="text-align: center">
+                </div>
+                <div id="load-more" class="div-load">
+                    <button class="btn-load">Ver todas as fotos</button>
+                </div>
             </div>
-            <div class="third-section" id="third-section">
-                <div class="third-container">
-                    <div class="content-about">
-                        <div class="div-about">
-                            <h1>Yas Mohamed</h1>
-                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed elit lacus, aliquet ac vehicula eget, commodo eu
-                                eros. Ut auctor cursus elit, eget mattis nunc ornare quis.
-                            </p>
-                            <div class="div-contact">
-                                <button onclick="window.location.href='#fourth-section'" class="btn-contact2">Entrar em contato</button>
-                                <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <rect x="4" y="4" width="16" height="16" rx="4" />
-                            <circle cx="12" cy="12" r="3" />
-                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-                          </svg></a>
+        </div>
+        <div class="third-section" id="third-section">
+            <div class="third-container">
+                <div class="content-about">
+                    <div class="div-about">
+                        <h1>Yas Mohamed</h1>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque, dui
+                            id tincidunt rutrum, mauris mauris efficitur mi, vehicula ultricies lacus diam nec elit. Sed
+                            elit lacus, aliquet ac vehicula eget, commodo eu eros.
+                            Ut auctor cursus elit, eget mattis nunc ornare quis.
+                        </p>
+                        <div class="div-contact">
+                            <button onclick="window.location.href='#fourth-section'" class="btn-contact2">Entrar em
+                                contato</button>
+                            <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                                </svg></a>
+                        </div>
+                    </div>
+                    <div class="div-img"><img class="img-about" src="./images/yas-test.jpeg" /></div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="fourth-section" id="fourth-section">
+            <div class="fourth-container">
+
+                <div class="div-img">
+                    <img class="img-about" src="./images/yas-bg.jpeg" />
+                </div>
+                <div class="contact-form">
+                    <div class="div-contact2">
+                        <h1>Entre em contato</h1>
+                    </div>
+                    <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="form-submit">
+                            <div class="name-email">
+                                <input type="text" name="name" placeholder="Nome" required>
+                                <input type="hidden" name="_subject" value="Email do Site">
+                                <input type="email" name="email" placeholder="Email" required>
+
                             </div>
-                        </div>
-                        <div class="div-img"><img class="img-about" src="./images/yas-test.jpeg" /></div>
-
-
-                    </div>
+                            <div class="msg">
+                                <textarea type="text" name="message" placeholder="Mensagem" required></textarea>
+                                <input type="hidden" name="_next" value="https://musical-bunny-4685e6.netlify.app/home">
+                            </div>
+                            <div class="div-btn-contact">
+                                <button type="submit" onsubmit="myFunction()" class="btn-contact">Enviar
+                                    Mensagem</button>
+                                <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                                    </svg></a>
+                            </div>
+                            <div class="result" id="result"> </div>
+                    </form>
                 </div>
-            </div>
-            <div class="fourth-section" id="fourth-section">
-                <div class="fourth-container">
-
-                    <div class="div-img">
-                        <img class="img-about" src="./images/yas-bg.jpeg" />
-                    </div>
-                    <div class="contact-form">
-                        <div class="div-contact2">
-                            <h1>Entre em contato</h1>
-                        </div>
-                        <form action="https://formsubmit.co/arthur.valls7@gmail.com" method="POST">
-                            <input type="hidden" name="_captcha" value="false">
-                            <div class="form-submit">
-                                <div class="name-email">
-                                    <input type="text" name="name" placeholder="Nome" required>
-                                    <input type="hidden" name="_subject" value="Email do Site">
-                                    <input type="email" name="email" placeholder="Email" required>
-
-                                </div>
-                                <div class="msg">
-                                    <textarea type="text" name="message" placeholder="Mensagem" required></textarea>
-                                    <input type="hidden" name="_next" value="https://musical-bunny-4685e6.netlify.app/home">
-                                </div>
-                                <div class="div-btn-contact">
-                                    <button type="submit" onsubmit="myFunction()" class="btn-contact">Enviar Mensagem</button>
-                                    <a href="https://instagram.com/mohamedclicks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <rect x="4" y="4" width="16" height="16" rx="4" />
-                                <circle cx="12" cy="12" r="3" />
-                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-                              </svg></a>
-                                </div>
-                                <div class="result" id="result"> </div>
-                        </form>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
     </div>
+    </div>
+    </div>
 </body>
-
-
 
 </html>

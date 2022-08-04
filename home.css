@@ -1,598 +1,661 @@
 @import url("https://rsms.me/inter/inter.css");
 :root {
-    --color-bg: #fbf9ff;
-    --color-text: #645673;
-    --color-header: #f8eaff;
-    --color-title: #3c3344;
-    --color-dark3: #e0aaff;
-    --color-dark4: #20122c;
-    --color-dark5: #5a189a;
-    --color-pink: #7b2cbf;
-    --font-main: "Inter", sans-serif;
-    --color-purple: #a480f2;
-    --color-lightpink: hsla(344, 100%, 73%, 1);
+  --color-bg: #fbf9ff;
+  --color-text: #645673;
+  --color-header: #f8eaff;
+  --color-title: #3c3344;
+  --color-dark3: #e0aaff;
+  --color-dark4: #20122c;
+  --color-dark5: #5a189a;
+  --color-pink: #7b2cbf;
+  --font-main: "Inter", sans-serif;
+  --color-purple: #a480f2;
+  --color-lightpink: hsla(344, 100%, 73%, 1);
 }
 
-.wrapper {
-    overflow-y: hidden;
+@keyframes showSidebar {
+  from {
+    margin-left: -110vw;
+  }
+  to {
+    margin-left: -8vw;
+  }
 }
 
+* {
+  box-sizing: border-box;
+}
 
 /* width */
 
 ::-webkit-scrollbar {
-    background: transparent;
-    width: 15px;
+  background: transparent;
+  width: 15px;
 }
-
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+  border-radius: 10px;
 }
-
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #ff759a;
-    border-radius: 10px;
+  background: #ff759a;
+  border-radius: 10px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-main);
-    scroll-behavior: smooth;
-    scrollbar-color: #ff759a var(--color-bg);
-    scrollbar-width: 15px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  scroll-behavior: smooth;
+  scrollbar-color: #ff759a var(--color-bg);
+  scrollbar-width: 15px;
 }
 
 body {
-    font-family: var(--font-main);
-    background-color: var(--color-bg);
-    color: var(--color-text);
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .nome {
-    font-family: var(--font-main);
-    font-weight: bold;
-    font-size: 2.5rem;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--color-lightpink);
-    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-    z-index: 1;
+  font-family: var(--font-main);
+  font-weight: bold;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: var(--color-lightpink);
+  background-image: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  z-index: 1;
 }
 
 h1 {
-    text-align: left;
+  text-align: left;
 }
 
 .div-about {
-    margin-right: 6rem;
-    width: 50%;
-    color: var(--color-bg);
+  margin-right: 6rem;
+  width: 50%;
+  color: var(--color-bg);
 }
 
 .div-about p {
-    color: #eae1fc;
+  color: #eae1fc;
 }
 
-.div-about>*,
-.div-description>*,
-.contact-form>* {
-    padding-bottom: 1rem;
+.div-about > *,
+.div-description > *,
+.contact-form > * {
+  padding-bottom: 1rem;
 }
 
 .first-container {
-    max-width: 1392px;
-    margin: auto;
-    height: 100%;
+  max-width: 1392px;
+  margin: auto;
+  height: 100%;
 }
 
 .first-section {
-    margin-bottom: 8rem;
+  margin-bottom: 8rem;
 }
 
 .first-flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .first-flexbox h1,
 .div-contact2 h1 {
-    font-weight: 900;
-    font-size: 56px;
-    line-height: 73px;
-    color: var(--color-title);
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 73px;
+  color: var(--color-title);
 }
 
 .first-flexbox p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .second-section {
-    padding: 2rem 0;
-    /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
-    width: 100%;
-    margin: 6rem 0;
+  padding: 2rem 0;
+  /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
+  width: 100%;
+  margin: 6rem 0;
 }
 
 .second-container {
-    max-width: 1392px;
-    margin: auto;
+  max-width: 1392px;
+  margin: auto;
 }
 
 .third-section {
-    background-color: var(--color-purple);
+  background-color: var(--color-purple);
 }
 
 .third-container {
-    max-width: 1392px;
-    margin: auto;
+  max-width: 1392px;
+  margin: auto;
 }
 
 .fourth-section,
 .third-section {
-    height: 100%;
-    margin: 8rem 0;
+  height: 100%;
+  margin: 8rem 0;
 }
 
 .fourth-container {
-    max-width: 1392px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 1392px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-about {
-    padding: 128px 0;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    align-items: center;
+  padding: 128px 0;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .second-section .pictures:nth-child(1),
 .second-section .pictures:nth-child(2),
 .second-section .pictures:nth-child(3) {
-    display: flex;
+  display: flex;
 }
 
 .pictures {
-    display: none;
-    justify-content: center;
-    width: 100%;
-    height: 15rem;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 15rem;
 }
 
 .pictures img {
-    border-radius: 2px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .pictures div {
-    width: 15rem;
-    height: 15rem;
-    margin-right: 1rem;
+  width: 15rem;
+  height: 15rem;
+  margin-right: 1rem;
 }
 
 .pictures button {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .div-contact {
-    line-height: 20px;
-    text-align: left;
-    padding-top: 2em;
+  line-height: 20px;
+  text-align: left;
+  padding-top: 2em;
 }
 
 .div-contact svg {
-    vertical-align: middle;
-    color: #9b287b;
+  vertical-align: middle;
+  color: #9b287b;
 }
 
 .div-img {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
 }
 
 .img-about {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 section {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .third-section p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .third-section h1 {
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 73px;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 73px;
 }
 
 .div-description {
-    width: 50%;
-    align-items: left;
-    margin-left: 6rem;
-    font-size: 18px;
+  width: 50%;
+  align-items: left;
+  margin-left: 6rem;
+  font-size: 18px;
 }
 
 a {
-    color: var(--color-text);
-    text-decoration: none;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .header,
 .headernav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .header {
-    background: var(--color-bg);
-    height: 3.5em;
-    justify-content: space-between;
-    padding: 4rem 128px;
+  background: var(--color-bg);
+  height: 3.5em;
+  justify-content: space-between;
+  padding: 4rem 128px;
 }
 
 .headernav {
-    gap: 3em;
-    z-index: 2;
+  gap: 3em;
+  z-index: 2;
 }
 
-.headernav>a {
-    text-decoration: none;
-    color: var(--color-text);
-    transition: 0.6s ease;
-    font-weight: bold;
+.headernav > a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: 0.6s ease;
+  font-weight: bold;
 }
 
 .header a:hover {
-    color: var(--color-lightpink);
+  color: var(--color-lightpink);
 }
 
 .content {
-    padding-top: 5em;
-    z-index: -10;
+  padding-top: 5em;
+  z-index: -10;
 }
 
 .btn-nav {
-    display: none;
-    background-color: transparent;
-    color: var(--color-text);
-    border: none;
-    cursor: pointer;
+  display: none;
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
 }
-
 
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 50%;
-    position: relative;
-    margin: auto;
+  max-width: 50%;
+  position: relative;
+  margin: auto;
 }
-
 
 /* Hide the images by default */
 
 .mySlides {
-    display: none;
-    width: 100%;
-    height: 40rem;
+  display: none;
+  width: 100%;
+  height: 40rem;
 }
 
 .mySlides img {
-    border-radius: 2px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
 
 /* Next & previous buttons */
 
 .prev,
 .next {
-    cursor: pointer;
-    width: auto;
-    padding: 0.5rem;
-    color: var(--color-purple);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  cursor: pointer;
+  width: auto;
+  padding: 0.5rem;
+  color: var(--color-purple);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .slideshow-indicator {
-    padding-top: 0.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    align-items: center;
-    gap: 1rem;
+  padding-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  gap: 1rem;
 }
-
 
 /* Position the "next button" to the right */
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-
 
 /* On hover, add a black background color with a little bit see-through */
 
 .prev:hover,
 .next:hover {
-    background-color: #a480f228;
+  background-color: #a480f228;
 }
-
 
 /* Caption text */
 
 .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
-
 
 /* The dots/bullets/indicators */
 
 .dot {
-    border-radius: 2px;
-    cursor: pointer;
-    height: 15px;
-    width: 6rem;
-    margin: 0 2px;
-    background-color: #a480f228;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 15px;
+  width: 6rem;
+  margin: 0 2px;
+  background-color: #a480f228;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #a480f2;
+  background-color: #a480f2;
 }
-
 
 /* Fading animation */
 
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {
-        opacity: 0.6;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .btn-pics {
-    background-color: var(--color-bg);
-    transition: 0.6s ease;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    border: 2px solid var(--color-purple);
-    border-radius: 2px;
-    color: var(--color-purple);
-    font-family: var(--font-main);
-    font-weight: 600;
-    font-size: 18px;
+  background-color: var(--color-bg);
+  transition: 0.6s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid var(--color-purple);
+  border-radius: 2px;
+  color: var(--color-purple);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .btn-pics:hover {
-    border: 2px solid transparent;
-    background-color: var(--color-lightpink);
-    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: var(--color-bg);
-    cursor: pointer;
+  border: 2px solid transparent;
+  background-color: var(--color-lightpink);
+  background-image: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: var(--color-bg);
+  cursor: pointer;
 }
 
 .btn-load {
-    padding: 1.5rem;
-    font-size: 24px;
-    border-radius: 2px;
-    font-weight: 600;
-    background-color: var(--color-lightpink);
-    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: #fbf9ff;
-    border: 0;
-    cursor: pointer;
-    transition: 0.6s ease;
+  padding: 1.5rem;
+  font-size: 24px;
+  border-radius: 2px;
+  font-weight: 600;
+  background-color: var(--color-lightpink);
+  background-image: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: #fbf9ff;
+  border: 0;
+  cursor: pointer;
+  transition: 0.6s ease;
 }
 
 .btn-load:hover,
 .btn-contact:hover {
-    background-color: hsla(344, 100%, 73%, 0.3);
-    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  background-color: hsla(344, 100%, 73%, 0.3);
+  background-image: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
 }
 
 .div-load {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-contact {
-    padding: 1.5rem;
-    font-size: 24px;
-    line-height: 36px;
-    border-radius: 2px;
-    font-weight: 600;
-    background-color: var(--color-lightpink);
-    background-image: radial-gradient( at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: #fbf9ff;
-    border: 0;
-    cursor: pointer;
-    transition: 0.6s ease;
+  padding: 1.5rem;
+  font-size: 24px;
+  line-height: 36px;
+  border-radius: 2px;
+  font-weight: 600;
+  background-color: var(--color-lightpink);
+  background-image: radial-gradient(
+      at 86% 5%,
+      hsla(321, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: #fbf9ff;
+  border: 0;
+  cursor: pointer;
+  transition: 0.6s ease;
 }
 
 .btn-contact2 {
-    transition: 0.6s ease;
-    margin-right: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 2px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    border: 0;
-    cursor: pointer;
-    color: var(--color-purple);
-    box-shadow: 0px 14px 94px rgba(133, 94, 217, 0.25), 0px 5.11023px 34.3115px rgba(133, 94, 217, 0.15), 0px 2.48092px 16.6576px rgba(133, 94, 217, 0.14), 0px 1.21619px 8.16588px rgba(133, 94, 217, 0.1), 0px 0.480885px 3.2288px rgba(133, 94, 217, 0.08);
+  transition: 0.6s ease;
+  margin-right: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  border: 0;
+  cursor: pointer;
+  color: var(--color-purple);
+  box-shadow: 0px 14px 94px rgba(133, 94, 217, 0.25),
+    0px 5.11023px 34.3115px rgba(133, 94, 217, 0.15),
+    0px 2.48092px 16.6576px rgba(133, 94, 217, 0.14),
+    0px 1.21619px 8.16588px rgba(133, 94, 217, 0.1),
+    0px 0.480885px 3.2288px rgba(133, 94, 217, 0.08);
 }
 
 .btn-contact2:hover {
-    background-color: var(--color-lightpink);
-    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: var(--color-bg);
+  background-color: var(--color-lightpink);
+  background-image: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: var(--color-bg);
 }
 
 .div-contact a svg {
-    color: var(--color-bg);
+  color: var(--color-bg);
 }
 
 .div-contact a svg:hover {
-    transition: 0.6s ease;
-    filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: rgb(253, 156, 182);
+  transition: 0.6s ease;
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: rgb(253, 156, 182);
 }
 
 hr.solid {
-    border-top: 2px solid var(--color-purple);
-    margin: 3rem 12rem 3rem 12rem;
-    opacity: 25%;
+  border-top: 2px solid var(--color-purple);
+  margin: 3rem 12rem 3rem 12rem;
+  opacity: 25%;
 }
 
 .second-section .dividers:nth-child(1),
 .second-section .dividers:nth-child(2),
 .second-section .dividers:nth-child(3),
 .second-section .dividers:nth-child(4) {
-    display: block;
+  display: block;
 }
 
 .second-section .dividers {
-    display: none;
+  display: none;
 }
 
 .form-submit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-submit input,
 .form-submit textarea {
-    padding: 1.5rem;
-    font-family: var(--font-main);
-    font-size: 18px;
-    border: 2px solid var(--color-purple);
-    background-color: transparent;
-    border-radius: 2px;
-    margin: 0 0 1rem 0;
+  padding: 1.5rem;
+  font-family: var(--font-main);
+  font-size: 18px;
+  border: 2px solid var(--color-purple);
+  background-color: transparent;
+  border-radius: 2px;
+  margin: 0 0 1rem 0;
 }
 
 .contact-form {
-    width: 50%;
-    margin-left: 6rem;
+  width: 50%;
+  margin-left: 6rem;
 }
 
 .name-email,
 .name-email input,
 .msg,
 .msg textarea {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
 }
 
 .msg textarea {
-    width: 100%;
-    height: 17.5rem;
-    resize: none;
+  width: 100%;
+  height: 17.5rem;
+  resize: none;
 }
 
 .form-submit input::placeholder,
 .form-submit textarea::placeholder {
-    color: #a480f29f;
-    font-style: italic;
+  color: #a480f29f;
+  font-style: italic;
 }
 
 .form-submit input:focus,
 .form-submit textarea:focus {
-    color: rgb(253, 156, 182);
-    outline: none;
-    border: 2px solid rgb(253, 156, 182);
+  color: rgb(253, 156, 182);
+  outline: none;
+  border: 2px solid rgb(253, 156, 182);
 }
 
 .form-submit input:focus::placeholder,
 .form-submit textarea:focus::placeholder {
-    color: rgb(253, 156, 182);
+  color: rgb(253, 156, 182);
 }
 
 .div-btn-contact {
-    line-height: 20px;
-    text-align: left;
-    padding-top: 2em;
-    width: 100%;
+  line-height: 20px;
+  text-align: left;
+  padding-top: 2em;
+  width: 100%;
 }
 
 .btn-contact {
-    margin-right: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .div-btn-contact svg {
-    vertical-align: middle;
-    color: var(--color-lightpink);
-    transition: 0.6s ease;
+  vertical-align: middle;
+  color: var(--color-lightpink);
+  transition: 0.6s ease;
 }
 
 .div-btn-contact svg:hover {
-    color: hsla(344, 100%, 73%, 0.6);
+  color: hsla(344, 100%, 73%, 0.6);
 }
