@@ -7,19 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./mobile.css" />
     <script type="text/javascript" src="script.js" defer></script>
     <title>Yasmin Mohamed | Fotografia Profissional</title>
 </head>
 
-<body>
+<body id="body">
     <div class="header" id="header">
         <button onclick="sidebar()" class="btn-nav">
-        <img src="./images/menu-2.svg" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+             </svg>
       </button>
-        <div class="name">Yasmin Mohamed</div>
+        <div class="nome" id="nome">Yasmin Mohamed</div>
         <nav class="headernav" id="headernav">
             <button onclick="sidebar()" class="btn-nav">
-          <img src="./images/x.svg" />
+                <svg style="margin-top: 1em" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--color-bg)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                 </svg>
         </button>
             <a onclick="closeSidebar()" href="#header" class="">home</a>
             <a onclick="closeSidebar()" href="#second-section" class="">fotos</a>
@@ -79,7 +89,7 @@
 
                         <!-- Next and previous buttons -->
                         <br>
-                        <div style="padding-top: 0.5rem; width: 100%;display: flex; justify-content: center; height:40px; align-items: center; gap: 1rem;">
+                        <div class="slideshow-indicator">
                             <span class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#a480f2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <line x1="5" y1="12" x2="19" y2="12" />
@@ -120,7 +130,7 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/ufrj01.JPG">
+                        <img src="./images/ufrj04.JPG">
                     </div>
                     <div>
                         <img src="./images/ufrj02.JPG">
@@ -129,7 +139,7 @@
                         <img src="./images/ufrj03.JPG">
                     </div>
                     <div>
-                        <img src="./images/ufrj04.JPG">
+                        <img src="./images/ufrj01.JPG">
                     </div>
                     <div>
                         <img src="./images/ufrj05.JPG">
@@ -149,10 +159,10 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/pink01.JPG">
+                        <img src="./images/pink02.JPG">
                     </div>
                     <div>
-                        <img src="./images/pink02.JPG">
+                        <img src="./images/pink01.JPG">
                     </div>
                     <div>
                         <img src="./images/pink03.JPG">
@@ -207,7 +217,7 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/dce01.JPG">
+                        <img src="./images/dce04.JPG">
                     </div>
                     <div>
                         <img src="./images/dce02.JPG">
@@ -216,7 +226,7 @@
                         <img src="./images/dce03.JPG">
                     </div>
                     <div>
-                        <img src="./images/dce04.JPG">
+                        <img src="./images/dce01.JPG">
                     </div>
                     <div>
                         <img src="./images/dce05.JPG">
@@ -236,10 +246,10 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/carna01.JPG">
+                        <img src="./images/carna02.JPG">
                     </div>
                     <div>
-                        <img src="./images/carna02.JPG">
+                        <img src="./images/carna01.JPG">
                     </div>
                     <div>
                         <img src="./images/carna03.JPG">
@@ -265,7 +275,7 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/clara01.JPG">
+                        <img src="./images/clara04.JPG">
                     </div>
                     <div>
                         <img src="./images/clara02.JPG">
@@ -274,7 +284,7 @@
                         <img src="./images/clara03.JPG">
                     </div>
                     <div>
-                        <img src="./images/clara04.JPG">
+                        <img src="./images/clara01.JPG">
                     </div>
                     <div>
                         <img src="./images/clara05.JPG">
@@ -294,19 +304,19 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/ufrj01.JPG">
+                        <img src="./images/cade.jpg">
                     </div>
                     <div>
-                        <img src="./images/christmas-tree.svg">
+                        <img src="./images/cade.jpg">
                     </div>
                     <div>
-                        <img src="./images/ufrj03.JPG">
+                        <img src="./images/cade.jpg">
                     </div>
                     <div>
-                        <img src="./images/ufrj04.JPG">
+                        <img src="./images/cade.jpg">
                     </div>
                     <div>
-                        <img src="./images/ufrj05.JPG">
+                        <img src="./images/cade.jpg">
                     </div>
                     <div style="margin: 0;">
                         <button class="btn-pics" onclick="window.location.href='https://drive.google.com/drive/folders/18lD3X0AYPrI1dPSs5rHE0ezndhJeRuC6'">VER TODAS AS FOTOS CHURRAS 3002✖️<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -323,7 +333,7 @@
                 <div class="pictures">
 
                     <div>
-                        <img src="./images/natal01.JPG">
+                        <img src="./images/natal04.JPG">
                     </div>
                     <div>
                         <img src="./images/natal02.JPG">
@@ -332,7 +342,7 @@
                         <img src="./images/natal03.JPG">
                     </div>
                     <div>
-                        <img src="./images/natal04.JPG">
+                        <img src="./images/natal01.JPG">
                     </div>
                     <div>
                         <img src="./images/natal05.JPG">
@@ -347,7 +357,6 @@
                     </div>
                 </div>
                 <div class="dividers" style="text-align: center">
-                    <hr class="solid">
                 </div>
                 <div id="load-more" class="div-load">
                     <button class="btn-load">Ver todas as fotos</button>

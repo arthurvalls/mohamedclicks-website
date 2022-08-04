@@ -1,21 +1,29 @@
 var header = document.getElementById("header");
 var headernav = document.getElementById("headernav");
 var content = document.getElementById('content');
+var nome = document.getElementById('nome');
 var showSidebar = false;
+var body = document.getElementById('body');
 
 function sidebar() {
     showSidebar = !showSidebar;
     if (showSidebar) {
 
-        headernav.style.marginLeft = '-10vw';
+        headernav.style.marginLeft = '-8vw';
         headernav.style.animationName = 'showSidebar';
         content.style.filter = 'blur(2px)';
+        nome.style.filter = 'blur(2px)';
+        body.style.overflowY = 'hidden';
 
     } else {
 
-        headernav.style.marginLeft = '-100vw';
+        headernav.style.marginLeft = '-110vw';
         headernav.style.animationName = '';
         content.style.filter = '';
+        nome.style.filter = '';
+        body.style.overflowY = 'scroll';
+
+
     }
 }
 
