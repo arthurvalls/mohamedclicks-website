@@ -13,7 +13,7 @@ function sidebar() {
         headernav.style.animationName = 'showSidebar';
         content.style.filter = 'blur(2px)';
         nome.style.filter = 'blur(2px)';
-        body.style.overflowY = 'hidden';
+        body.style.overflow = 'hidden';
         body.style.position = 'relative';
 
     } else {
@@ -22,7 +22,7 @@ function sidebar() {
         headernav.style.animationName = '';
         content.style.filter = '';
         nome.style.filter = '';
-        body.style.overflowY = 'scroll';
+        body.style.overflow = 'scroll';
         body.style.position = '';
 
     }
