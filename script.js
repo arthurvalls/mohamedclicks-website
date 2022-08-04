@@ -16,6 +16,7 @@ function sidebar() {
         nome.style.filter = 'blur(2px)';
         body.style.overflowY = 'hidden';
         html.style.overflowY = 'hidden';
+        body.style.position = 'relative';
 
     } else {
 
