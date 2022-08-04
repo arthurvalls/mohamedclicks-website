@@ -1,16 +1,20 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://rsms.me/inter/inter.css");
 :root {
-    --color-bg: #FBF9FF;
+    --color-bg: #fbf9ff;
     --color-text: #645673;
-    --color-header: #F8EAFF;
-    --color-title: #3C3344;
-    --color-dark3: #E0AAFF;
+    --color-header: #f8eaff;
+    --color-title: #3c3344;
+    --color-dark3: #e0aaff;
     --color-dark4: #20122c;
-    --color-dark5: #5A189A;
-    --color-pink: #7B2CBF;
-    --font-main: 'Inter', sans-serif;
-    --color-purple: #A480F2;
+    --color-dark5: #5a189a;
+    --color-pink: #7b2cbf;
+    --font-main: "Inter", sans-serif;
+    --color-purple: #a480f2;
     --color-lightpink: hsla(344, 100%, 73%, 1);
+}
+
+.wrapper {
+    overflow-y: hidden;
 }
 
 
@@ -24,14 +28,14 @@
 
 /* Track */
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     border-radius: 10px;
 }
 
 
 /* Handle */
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #ff759a;
     border-radius: 10px;
 }
@@ -58,7 +62,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-color: var(--color-lightpink);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     z-index: 1;
 }
 
@@ -73,7 +77,7 @@ h1 {
 }
 
 .div-about p {
-    color: #EAE1FC;
+    color: #eae1fc;
 }
 
 .div-about>*,
@@ -103,7 +107,7 @@ h1 {
     font-weight: 900;
     font-size: 56px;
     line-height: 73px;
-    color: var(--color-title)
+    color: var(--color-title);
 }
 
 .first-flexbox p {
@@ -194,7 +198,7 @@ h1 {
 
 .div-contact svg {
     vertical-align: middle;
-    color: #9B287B;
+    color: #9b287b;
 }
 
 .div-img {
@@ -269,7 +273,7 @@ a {
 }
 
 .header a:hover {
-    color: var(--color-lightpink)
+    color: var(--color-lightpink);
 }
 
 .content {
@@ -394,10 +398,10 @@ a {
 
 @keyframes fade {
     from {
-        opacity: .6
+        opacity: 0.6;
     }
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -420,7 +424,7 @@ a {
 .btn-pics:hover {
     border: 2px solid transparent;
     background-color: var(--color-lightpink);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: var(--color-bg);
     cursor: pointer;
@@ -432,9 +436,9 @@ a {
     border-radius: 2px;
     font-weight: 600;
     background-color: var(--color-lightpink);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: #FBF9FF;
+    color: #fbf9ff;
     border: 0;
     cursor: pointer;
     transition: 0.6s ease;
@@ -443,7 +447,7 @@ a {
 .btn-load:hover,
 .btn-contact:hover {
     background-color: hsla(344, 100%, 73%, 0.3);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
 }
 
 .div-load {
@@ -457,9 +461,9 @@ a {
     border-radius: 2px;
     font-weight: 600;
     background-color: var(--color-lightpink);
-    background-image: radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-    color: #FBF9FF;
+    color: #fbf9ff;
     border: 0;
     cursor: pointer;
     transition: 0.6s ease;
@@ -481,7 +485,7 @@ a {
 
 .btn-contact2:hover {
     background-color: var(--color-lightpink);
-    background-image: radial-gradient(at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+    background-image: radial-gradient( at 42% 40%, hsla(353, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%), radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
     filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15)) drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497)) drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436)) drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564)) drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
     color: var(--color-bg);
 }
