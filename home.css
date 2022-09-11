@@ -11,6 +11,22 @@
   --font-main: "Inter", sans-serif;
   --color-purple: #a480f2;
   --color-lightpink: hsla(344, 100%, 73%, 1);
+  --mesh-gradient: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  --mesh-gradient-transparent: radial-gradient(
+      at 42% 40%,
+      hsla(353, 100%, 81%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
 }
 
 @keyframes showSidebar {
@@ -24,6 +40,22 @@
 
 * {
   box-sizing: border-box;
+}
+body {
+  background-size: 40px 40px;
+  background-image: radial-gradient(
+    circle,
+    #a480f225 2px,
+    rgba(0, 0, 0, 0) 2px
+  );
+}
+
+.white {
+  color: var(--color-bg);
+}
+
+.pink {
+  color: var(--color-lightpink);
 }
 
 /* width */
@@ -46,6 +78,17 @@
   border-radius: 10px;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fbf9ff;
+  background: #a480f2;
+}
+
+::selection {
+  color: #fbf9ff;
+  background: #a480f2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,81 +106,83 @@ body {
 
 .nome {
   font-family: var(--font-main);
-  font-weight: bold;
-  font-size: 2.5rem;
+  font-weight: 800;
+  font-size: 2rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: var(--color-lightpink);
-  background-image: radial-gradient(
-      at 42% 40%,
-      hsla(353, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  background-image: var(--mesh-gradient);
   z-index: 1;
 }
 
 h1 {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 1.3;
   text-align: left;
+  color: var(--color-title);
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .div-about {
-  margin-right: 6rem;
   width: 50%;
-  color: var(--color-bg);
 }
 
-.div-about p {
-  color: #eae1fc;
-}
-
-.div-about > *,
-.div-description > *,
-.contact-form > * {
+.div-about > *:not(:last-child),
+.div-description > *:not(:last-child),
+.contact-form > *:not(:last-child) {
   padding-bottom: 1rem;
 }
 
 .first-container {
-  max-width: 1392px;
   margin: auto;
   height: 100%;
-}
-
-.first-section {
-  margin-bottom: 8rem;
-}
-
-.first-flexbox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.first-flexbox h1,
-.div-contact2 h1 {
-  font-weight: 900;
-  font-size: 56px;
-  line-height: 73px;
-  color: var(--color-title);
+.first-container,
+.second-container,
+.third-container,
+.fourth-container {
+  max-width: 75%;
 }
 
-.first-flexbox p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+.first-container,
+.third-container,
+.fourth-container {
+  gap: 4em;
+}
+
+/* Começo do espaçamento entre as seções */
+
+.first-section {
+  margin-bottom: 6.8rem;
 }
 
 .second-section {
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   /* 2rem para quando clicar em "fotos" ter um espaço sobrando em cima (e 6rem na margin para somar 8rem no total) */
   width: 100%;
-  margin: 6rem 0;
+  margin: 5.4rem 0;
 }
 
+.fourth-section,
+.third-section {
+  height: 100%;
+  margin: 6.8rem 0;
+}
+
+/* Fim do espaçamento entre as seções */
+
 .second-container {
-  max-width: 1392px;
   margin: auto;
 }
 
@@ -146,29 +191,17 @@ h1 {
 }
 
 .third-container {
-  max-width: 1392px;
-  margin: auto;
-}
-
-.fourth-section,
-.third-section {
-  height: 100%;
-  margin: 8rem 0;
-}
-
-.fourth-container {
-  max-width: 1392px;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 128px 0;
+  margin: auto;
 }
 
-.content-about {
-  padding: 128px 0;
+.fourth-container {
+  margin: auto;
   display: flex;
   justify-content: center;
-  vertical-align: middle;
   align-items: center;
 }
 
@@ -182,20 +215,19 @@ h1 {
   display: none;
   justify-content: center;
   width: 100%;
-  height: 15rem;
 }
 
 .pictures img {
-  border-radius: 2px;
+  border-radius: 4px;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
 .pictures div {
-  width: 15rem;
-  height: 15rem;
-  margin-right: 1rem;
+  aspect-ratio: 1/1.05;
+  margin-right: 0.8rem;
+  width: 100%;
 }
 
 .pictures button {
@@ -203,23 +235,14 @@ h1 {
   height: 100%;
 }
 
-.div-contact {
-  line-height: 20px;
-  text-align: left;
-  padding-top: 2em;
-}
-
-.div-contact svg {
-  vertical-align: middle;
-  color: #9b287b;
-}
-
 .div-img {
-  height: 50%;
+  aspect-ratio: 1/1.05;
   width: 50%;
 }
 
 .img-about {
+  object-fit: cover;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -236,22 +259,15 @@ section {
 }
 
 .third-section p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+  color: #eae1fc;
 }
 
 .third-section h1 {
-  font-weight: 800;
-  font-size: 56px;
-  line-height: 73px;
+  color: var(--color-bg);
 }
 
 .div-description {
-  width: 50%;
   align-items: left;
-  margin-left: 6rem;
-  font-size: 18px;
 }
 
 a {
@@ -266,23 +282,40 @@ a {
   align-items: center;
 }
 
+.instagram-navbar {
+  display: none;
+}
+
 .header {
-  background: var(--color-bg);
-  height: 3.5em;
+  background-size: 40px 40px;
+  background-image: radial-gradient(
+    circle,
+    #a480f225 2px,
+    rgba(0, 0, 0, 0) 2px
+  );
+  background-color: #fbf9fff1;
+  transition: 0.4s ease;
+  z-index: 9999;
+  position: sticky;
+  top: 0px;
   justify-content: space-between;
-  padding: 4rem 128px;
+  padding: 1.5rem 10%;
+}
+
+header.sticky {
+  padding: 0.8rem 10%;
 }
 
 .headernav {
-  gap: 3em;
+  gap: 3rem;
   z-index: 2;
 }
 
 .headernav > a {
   text-decoration: none;
+  font-weight: 600;
   color: var(--color-text);
   transition: 0.6s ease;
-  font-weight: bold;
 }
 
 .header a:hover {
@@ -290,14 +323,14 @@ a {
 }
 
 .content {
-  padding-top: 5em;
+  padding-top: 1.5rem;
   z-index: -10;
 }
 
-.btn-nav {
+.hamburguer-nav {
   display: none;
   background-color: transparent;
-  color: var(--color-text);
+  color: var(--color-title);
   border: none;
   cursor: pointer;
 }
@@ -313,13 +346,12 @@ a {
 /* Hide the images by default */
 
 .mySlides {
+  aspect-ratio: 1/1.05;
   display: none;
-  width: 100%;
-  height: 40rem;
 }
 
 .mySlides img {
-  border-radius: 2px;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -333,10 +365,7 @@ a {
   width: auto;
   padding: 0.5rem;
   color: var(--color-purple);
-  font-weight: bold;
-  font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
@@ -347,14 +376,14 @@ a {
   justify-content: center;
   height: 40px;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 /* Position the "next button" to the right */
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -364,25 +393,13 @@ a {
   background-color: #a480f228;
 }
 
-/* Caption text */
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
 /* The dots/bullets/indicators */
 
 .dot {
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   height: 15px;
-  width: 6rem;
+  width: 5vw;
   margin: 0 2px;
   background-color: #a480f228;
   display: inline-block;
@@ -410,119 +427,38 @@ a {
   }
 }
 
-.btn-pics {
-  background-color: var(--color-bg);
+.btn-all {
   transition: 0.6s ease;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  border: 2px solid var(--color-purple);
-  border-radius: 2px;
-  color: var(--color-purple);
-  font-family: var(--font-main);
+  padding: 1.2rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 18px;
+  border: 0;
+  cursor: pointer;
 }
 
-.btn-pics:hover {
-  border: 2px solid transparent;
+.btn-contact,
+.btn-load,
+.btn-contact2:hover {
   background-color: var(--color-lightpink);
-  background-image: radial-gradient(
-      at 42% 40%,
-      hsla(353, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
+  background-image: var(--mesh-gradient);
   filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
     drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
     drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
     drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
     drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
   color: var(--color-bg);
-  cursor: pointer;
-}
-
-.btn-load {
-  padding: 1.5rem;
-  font-size: 24px;
-  border-radius: 2px;
-  font-weight: 600;
-  background-color: var(--color-lightpink);
-  background-image: radial-gradient(
-      at 42% 40%,
-      hsla(353, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
-    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
-    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
-    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
-    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-  color: #fbf9ff;
-  border: 0;
-  cursor: pointer;
-  transition: 0.6s ease;
 }
 
 .btn-load:hover,
 .btn-contact:hover {
   background-color: hsla(344, 100%, 73%, 0.3);
-  background-image: radial-gradient(
-      at 42% 40%,
-      hsla(353, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-}
-
-.div-load {
-  text-align: center;
-}
-
-.btn-contact {
-  padding: 1.5rem;
-  font-size: 24px;
-  line-height: 36px;
-  border-radius: 2px;
-  font-weight: 600;
-  background-color: var(--color-lightpink);
-  background-image: radial-gradient(
-      at 86% 5%,
-      hsla(321, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
-    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
-    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
-    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
-    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-  color: #fbf9ff;
-  border: 0;
-  cursor: pointer;
-  transition: 0.6s ease;
+  background-image: var(--mesh-gradient-transparent);
 }
 
 .btn-contact2 {
-  transition: 0.6s ease;
-  margin-right: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  border: 0;
-  cursor: pointer;
+  background-color: var(--color-bg);
   color: var(--color-purple);
   box-shadow: 0px 14px 94px rgba(133, 94, 217, 0.25),
     0px 5.11023px 34.3115px rgba(133, 94, 217, 0.15),
@@ -531,26 +467,15 @@ a {
     0px 0.480885px 3.2288px rgba(133, 94, 217, 0.08);
 }
 
-.btn-contact2:hover {
-  background-color: var(--color-lightpink);
-  background-image: radial-gradient(
-      at 42% 40%,
-      hsla(353, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 86% 5%, hsla(321, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 79%, hsla(331, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 81%, hsla(351, 100%, 81%, 1) 0px, transparent 50%);
-  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
-    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
-    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
-    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
-    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
-  color: var(--color-bg);
-}
-
-.div-contact a svg {
-  color: var(--color-bg);
+.div-contact {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  line-height: 20px;
+  text-align: left;
+  padding-top: 1rem;
 }
 
 .div-contact a svg:hover {
@@ -563,10 +488,49 @@ a {
   color: rgb(253, 156, 182);
 }
 
+.div-contact svg {
+  vertical-align: middle;
+  transition: 0.6s ease;
+}
+
+.btn-pics {
+  background-color: var(--color-bg);
+  transition: 0.6s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  border: 2px solid var(--color-purple);
+  border-radius: 4px;
+  color: var(--color-purple);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+  gap: 0.5em;
+}
+
+.btn-pics:hover {
+  border: 2px solid #ffffff00;
+  background-color: var(--color-lightpink);
+  background-image: var(--mesh-gradient);
+  filter: drop-shadow(0px 14px 94px rgba(249, 146, 173, 0.15))
+    drop-shadow(0px 5.11023px 34.3115px rgba(249, 146, 173, 0.103497))
+    drop-shadow(0px 2.48092px 16.6576px rgba(249, 146, 173, 0.0834436))
+    drop-shadow(0px 1.21619px 8.16588px rgba(249, 146, 173, 0.0665564))
+    drop-shadow(0px 0.480885px 3.2288px rgba(249, 146, 173, 0.0465028));
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+.div-load {
+  text-align: center;
+}
+
 hr.solid {
   border-top: 2px solid var(--color-purple);
-  margin: 3rem 12rem 3rem 12rem;
-  opacity: 25%;
+  margin: 3rem 10%;
+  opacity: 15%;
 }
 
 .second-section .dividers:nth-child(1),
@@ -589,18 +553,17 @@ hr.solid {
 
 .form-submit input,
 .form-submit textarea {
-  padding: 1.5rem;
+  padding: 1.2rem;
   font-family: var(--font-main);
-  font-size: 18px;
+  font-size: 0.9rem;
   border: 2px solid var(--color-purple);
-  background-color: transparent;
-  border-radius: 2px;
+  background-color: var(--color-bg);
+  border-radius: 4px;
   margin: 0 0 1rem 0;
 }
 
 .contact-form {
   width: 50%;
-  margin-left: 6rem;
 }
 
 .name-email,
@@ -612,12 +575,12 @@ hr.solid {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 2em;
+  gap: 1rem;
 }
 
 .msg textarea {
   width: 100%;
-  height: 17.5rem;
+  height: 14rem;
   resize: none;
 }
 
@@ -637,25 +600,4 @@ hr.solid {
 .form-submit input:focus::placeholder,
 .form-submit textarea:focus::placeholder {
   color: rgb(253, 156, 182);
-}
-
-.div-btn-contact {
-  line-height: 20px;
-  text-align: left;
-  padding-top: 2em;
-  width: 100%;
-}
-
-.btn-contact {
-  margin-right: 1.5rem;
-}
-
-.div-btn-contact svg {
-  vertical-align: middle;
-  color: var(--color-lightpink);
-  transition: 0.6s ease;
-}
-
-.div-btn-contact svg:hover {
-  color: hsla(344, 100%, 73%, 0.6);
 }
